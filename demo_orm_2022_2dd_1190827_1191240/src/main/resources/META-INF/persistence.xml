@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+  <persistence-unit name="DEMO_ORMPU">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>isep.eapli.demo_orm.dominio.GrupoAutomovel</class>
+    <class>isep.eapli.demo_orm.dominio.Automovel</class>
+    <class>isep.eapli.demo_orm.dominio.Cliente</class>
+    <class>isep.eapli.demo_orm.dominio.ContratoAluguer</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+      <property name="javax.persistence.jdbc.url"
+                value="jdbc:h2:./db/rentacar"/>
+      <property name="javax.persistence.jdbc.user" value="user"/>
+      <property name="javax.persistence.jdbc.password" value="password"/>
+      <property name="javax.persistence.schema-generation.database.action"
+                value="create"/>
+    </properties>
+  </persistence-unit>
+
+</persistence>
